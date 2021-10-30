@@ -1,0 +1,12 @@
+.hook-form form{
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+    margin-top: 40px;
+    width: 80%;
+}
+.hook-form input{
+    border-style: hidden;
+    border-bottom: 1px solid gray;
+    margin: 5px 0px;
+}

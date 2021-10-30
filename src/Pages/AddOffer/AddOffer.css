@@ -1,0 +1,11 @@
+.add-offer form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.add-offer input{
+    border-style: hidden;
+    border-bottom: 1px solid gray;
+    margin: 5px 0px;
+    width: 30%;
+}
