@@ -6,7 +6,7 @@ import './AddOffer.css';
 const AddOffer = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
-        fetch('http://localhost:5000/addOffer', {
+        fetch('https://ghoulish-moonlight-52209.herokuapp.com/addOffer', {
             method: 'POST',
             headers: {'content-type':'application/json'},
             body: JSON.stringify(data),

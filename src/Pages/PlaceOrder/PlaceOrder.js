@@ -21,7 +21,7 @@ const PlaceOrder = () => {
         myData.placeDescription = description;
         myData.status = "PENDING";
 
-        fetch('http://localhost:5000/addBooking', {
+        fetch('https://ghoulish-moonlight-52209.herokuapp.com/addBooking', {
             method:"POST",
             headers: {'content-type':'application/json'},
             body:JSON.stringify(myData)
@@ -36,7 +36,7 @@ const PlaceOrder = () => {
     };
 
     useEffect(() => {
-        fetch(`http://localhost:5000/places/${placeId}`)
+        fetch(`https://ghoulish-moonlight-52209.herokuapp.com/places/${placeId}`)
         .then(res => res.json())
         .then(data => setPlaces(data))
     }, []);

@@ -8,7 +8,7 @@ const MyOrders = () => {
     const [myOrder, setMyOrder] = useState([]);
 
     useEffect( () => {
-        fetch(`http://localhost:5000/myOrders/${email}`)
+        fetch(`https://ghoulish-moonlight-52209.herokuapp.com/myOrders/${email}`)
         .then(res => res.json())
         .then(data => setMyOrder(data))
     }, []);
@@ -16,7 +16,7 @@ const MyOrders = () => {
     const handleDeleteOrder = (id) => {
         const isDelete = window.confirm("Are You Sure to Delete?");
         if(isDelete){
-            fetch(`http://localhost:5000/myOrders/${id}`, {
+            fetch(`https://ghoulish-moonlight-52209.herokuapp.com/myOrders/${id}`, {
             method:'DELETE',
         })
         .then(res => res.json())
@@ -32,7 +32,7 @@ const MyOrders = () => {
 
     const handleUpdateStatus = (statusId) => {
         const data = myOrder;
-        fetch(`http://localhost:5000/status/${statusId}`, {
+        fetch(`https://ghoulish-moonlight-52209.herokuapp.com/status/${statusId}`, {
             method:'PUT',
             headers:{'content-type':'application/json'},
             body: JSON.stringify({
@@ -44,7 +44,7 @@ const MyOrders = () => {
         .then(data => {
             if(data.modifiedCount > 0){
                 alert('Successfully Approved');
-                
+
             }
         })
     }
